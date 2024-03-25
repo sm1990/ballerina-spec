@@ -10,7 +10,9 @@ updated_spec = open("updated_spec.md", 'a')
 spec_version = response.json()["name"]
 release_date = response.json()["published_at"][0:10]
 release_note = response.json()["body"]
-print('3')
+print(spec_version)
+print(release_date)
+print(release_note)
 with open(sys.argv[1],'r') as read_obj:
     print('4')
     for line in read_obj.readlines():
