@@ -6,7 +6,7 @@ import os
 response = requests.get("https://api.github.com/repos/ballerina-platform/ballerina-spec/releases/latest")
 print('1')
 updated_spec = open("updated_spec.md", 'a')
-print('2')
+
 spec_version = response.json()["name"]
 release_date = response.json()["published_at"][0:10]
 release_note = response.json()["body"]
